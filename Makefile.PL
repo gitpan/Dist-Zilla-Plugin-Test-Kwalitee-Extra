@@ -11,7 +11,10 @@ use ExtUtils::MakeMaker 6.30;
 my %WriteMakefileArgs = (
   "ABSTRACT" => "Dist::Zilla plugin for Test::Kwalitee::Extra",
   "AUTHOR" => "Yasutaka ATARASHI <yakex\@cpan.org>",
-  "BUILD_REQUIRES" => {},
+  "BUILD_REQUIRES" => {
+    "Capture::Tiny" => 0,
+    "Path::Class" => 0
+  },
   "CONFIGURE_REQUIRES" => {
     "ExtUtils::MakeMaker" => "6.30"
   },
@@ -20,12 +23,14 @@ my %WriteMakefileArgs = (
   "LICENSE" => "perl",
   "NAME" => "Dist::Zilla::Plugin::Test::Kwalitee::Extra",
   "PREREQ_PM" => {
+    "Data::Section" => 0,
     "Dist::Zilla" => 0,
+    "File::Path" => "2.08",
     "Moose" => 0,
     "Test::Kwalitee::Extra" => 0,
     "Test::More" => 0
   },
-  "VERSION" => "v0.0.1",
+  "VERSION" => "v0.0.2",
   "test" => {
     "TESTS" => "t/*.t"
   }

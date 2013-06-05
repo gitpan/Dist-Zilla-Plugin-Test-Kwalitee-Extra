@@ -3,7 +3,7 @@ package Dist::Zilla::Plugin::Test::Kwalitee::Extra;
 use strict;
 use warnings;
 
-our $VERSION = 'v0.0.1'; # VERSION
+our $VERSION = 'v0.0.2'; # VERSION
 
 use Moose;
 use Data::Section-setup;
