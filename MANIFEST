@@ -1,11 +1,13 @@
 Changes
 LICENSE
 MANIFEST
+META.json
 META.yml
 Makefile.PL
 README
 dist.ini
 lib/Dist/Zilla/Plugin/Test/Kwalitee/Extra.pm
+t/00-compile.t
 t/author-critic.t
 t/release-kwalitee.t
 t/release-pod-coverage.t
@@ -14,3 +16,4 @@ t/test-kwalitee.t
 t/test-kwalitee/bin/foobar
 t/test-kwalitee/dist.ini
 t/test-kwalitee/lib/Foo.pm
+weaver.ini

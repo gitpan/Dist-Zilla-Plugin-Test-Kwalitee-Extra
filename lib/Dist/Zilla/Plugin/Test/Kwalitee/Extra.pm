@@ -3,7 +3,8 @@ package Dist::Zilla::Plugin::Test::Kwalitee::Extra;
 use strict;
 use warnings;
 
-our $VERSION = 'v0.0.2'; # VERSION
+# ABSTRACT: Dist::Zilla plugin for Test::Kwalitee::Extra
+our $VERSION = 'v0.1.0'; # VERSION
 
 use Moose;
 use Data::Section-setup;
@@ -39,11 +40,16 @@ sub gather_files {
 __PACKAGE__->meta->make_immutable;
 no Moose;
 1;
+
 =pod
 
 =head1 NAME
 
 Dist::Zilla::Plugin::Test::Kwalitee::Extra - Dist::Zilla plugin for Test::Kwalitee::Extra
+
+=head1 VERSION
+
+version v0.1.0
 
 =head1 SYNOPSIS
 
@@ -104,6 +110,10 @@ Create C<xt/release/kwalitee.t>.
 
 =back
 
+=head1 NAME
+
+Dist::Zilla::Plugin::Test::Kwalitee::Extra - Dist::Zilla plugin for Test::Kwalitee::Extra
+
 =head1 AUTHORS
 
 =over 4
@@ -123,7 +133,19 @@ Yasutaka ATARASHI <yakex@cpan.org>
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
+=head1 AUTHOR
+
+Yasutaka ATARASHI <yakex@cpan.org>
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is copyright (c) 2012 by Yasutaka ATARASHI.
+
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
+
 =cut
+
 __DATA__
 ___[ xt/release/kwalitee.t ]___
 #!perl
