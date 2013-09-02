@@ -12,9 +12,8 @@ BEGIN {
 use strict;
 use warnings;
 use Test::More;   # needed to provide plan.
-eval {
-  require Test::Kwalitee::Extra;
-  Test::Kwalitee::Extra->import( qw( !has_example ) );
-};
 
+eval { require Test::Kwalitee::Extra };
 plan skip_all => "Test::Kwalitee::Extra required for testing kwalitee: $@" if $@;
+
+eval "use Test::Kwalitee::Extra qw( !has_example )"

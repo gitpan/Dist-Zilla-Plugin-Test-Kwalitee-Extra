@@ -4,7 +4,7 @@ use strict;
 use warnings;
 
 # ABSTRACT: Dist::Zilla plugin for Test::Kwalitee::Extra
-our $VERSION = 'v0.1.0'; # VERSION
+our $VERSION = 'v0.1.2'; # VERSION
 
 use Moose;
 use Data::Section-setup;
@@ -22,11 +22,7 @@ sub gather_files {
   if ( @{ $self->arg } > 0 ) {
 
     my $arg = join ' ', @{ $self->arg };
-
-    $tests = qq[eval {
-  require Test::Kwalitee::Extra;
-  Test::Kwalitee::Extra->import( qw( $arg ) );
-};];
+    $tests = qq[eval "use Test::Kwalitee::Extra qw( $arg )"];
 
   }
   require Dist::Zilla::File::InMemory;
@@ -49,7 +45,7 @@ Dist::Zilla::Plugin::Test::Kwalitee::Extra - Dist::Zilla plugin for Test::Kwalit
 
 =head1 VERSION
 
-version v0.1.0
+version v0.1.2
 
 =head1 SYNOPSIS
 
@@ -154,6 +150,8 @@ ___[ xt/release/kwalitee.t ]___
 use strict;
 use warnings;
 use Test::More;   # needed to provide plan.
-{{ $tests }}
 
+eval { require Test::Kwalitee::Extra };
 plan skip_all => "Test::Kwalitee::Extra required for testing kwalitee: $@" if $@;
+
+{{ $tests }}
