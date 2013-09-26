@@ -25,18 +25,19 @@ my %WriteMakefileArgs = (
     "File::Path" => "2.08",
     "Module::CPANTS::Analyse" => "0.87",
     "Moose" => 0,
-    "Test::Kwalitee::Extra" => "v0.1.3",
+    "Test::Kwalitee::Extra" => "v0.2.0",
     "Test::More" => 0
   },
   "TEST_REQUIRES" => {
     "Capture::Tiny" => 0,
+    "File::Spec" => 0,
     "IO::Handle" => 0,
     "IPC::Open3" => 0,
     "Path::Class" => 0,
     "Test::More" => 0,
     "version" => "0.77"
   },
-  "VERSION" => "v0.1.3",
+  "VERSION" => "v0.2.0",
   "test" => {
     "TESTS" => "t/*.t"
   }

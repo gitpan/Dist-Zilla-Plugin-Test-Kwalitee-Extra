@@ -4,7 +4,7 @@ use strict;
 use warnings;
 
 # ABSTRACT: Dist::Zilla plugin for Test::Kwalitee::Extra
-our $VERSION = 'v0.1.3'; # VERSION
+our $VERSION = 'v0.2.0'; # VERSION
 
 use Moose;
 use Data::Section-setup;
@@ -45,7 +45,7 @@ Dist::Zilla::Plugin::Test::Kwalitee::Extra - Dist::Zilla plugin for Test::Kwalit
 
 =head1 VERSION
 
-version v0.1.3
+version v0.2.0
 
 =head1 SYNOPSIS
 
