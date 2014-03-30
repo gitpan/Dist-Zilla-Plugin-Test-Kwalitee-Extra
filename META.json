@@ -4,7 +4,7 @@
       "Yasutaka ATARASHI <yakex@cpan.org>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.300039, CPAN::Meta::Converter version 2.132140",
+   "generated_by" : "Dist::Zilla version 5.006, CPAN::Meta::Converter version 2.132140",
    "license" : [
       "perl_5"
    ],
@@ -33,7 +33,7 @@
             "File::Path" : "2.08",
             "Module::CPANTS::Analyse" : "0.87",
             "Moose" : "0",
-            "Test::Kwalitee::Extra" : "v0.2.0",
+            "Test::Kwalitee::Extra" : "v0.2.1",
             "Test::More" : "0",
             "perl" : "5.006"
          }
@@ -59,6 +59,6 @@
          "web" : "https://github.com/yak1ex/Dist-Zilla-Plugin-Test-Kwalitee-Extra"
       }
    },
-   "version" : "v0.2.0"
+   "version" : "v0.2.1"
 }
 

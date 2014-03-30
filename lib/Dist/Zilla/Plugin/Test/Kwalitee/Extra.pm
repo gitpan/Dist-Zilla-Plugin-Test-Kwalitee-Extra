@@ -4,7 +4,7 @@ use strict;
 use warnings;
 
 # ABSTRACT: Dist::Zilla plugin for Test::Kwalitee::Extra
-our $VERSION = 'v0.2.0'; # VERSION
+our $VERSION = 'v0.2.1'; # VERSION
 
 use Moose;
 use Data::Section-setup;
@@ -45,7 +45,7 @@ Dist::Zilla::Plugin::Test::Kwalitee::Extra - Dist::Zilla plugin for Test::Kwalit
 
 =head1 VERSION
 
-version v0.2.0
+version v0.2.1
 
 =head1 SYNOPSIS
 
@@ -53,6 +53,11 @@ In your C<dist.ini>,
 
   [Test::Kwalitee::Extra]
   arg = !has_example
+
+If you want to avoid network access
+
+  [Test::Kwalitee::Extra]
+  arg = !prereq_matches_use
 
 =head1 DESCRIPTION
 
@@ -109,6 +114,24 @@ Create C<xt/release/kwalitee.t>.
 =head1 NAME
 
 Dist::Zilla::Plugin::Test::Kwalitee::Extra - Dist::Zilla plugin for Test::Kwalitee::Extra
+
+=head1 CAVEATS
+
+An optional indicator C<prereq_matches_use> and an experimental indicator C<build_prereq_matches_use> require HTTP access to L<MetaCPAN site|https://metacpan.org/>. If you want to avoid it, you can specify excluded indicators like
+
+  # Avoid network access
+  [Test::Kwalitee::Extra]
+  arg = !prereq_matches_use
+
+  # or, when experimental enabled
+  [Test::Kwalitee::Extra]
+  arg = :experimental !prereq_matches_use !build_prereq_matches_use
+
+Or mitigate wait by tentative failures to reduce retry counts like
+
+  # Try just one time for each query
+  [Test::Kwalitee::Extra]
+  arg = :retry 1
 
 =head1 AUTHORS
 
